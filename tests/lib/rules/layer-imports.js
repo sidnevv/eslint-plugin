@@ -97,7 +97,7 @@ ruleTester.run("layer-imports", rule, {
       errors: [
         {
           message:
-            "Слой может импортировать в себя только нижележащие слои (shared, entities, features, widgets, pages, app)",
+            "A layer can only import underlying layers into itself (shared, entities, features, widgets, pages, app).",
         },
       ],
       options: aliasOptions,
@@ -109,7 +109,7 @@ ruleTester.run("layer-imports", rule, {
       errors: [
         {
           message:
-            "Слой может импортировать в себя только нижележащие слои (shared, entities, features, widgets, pages, app)",
+            "A layer can only import underlying layers into itself (shared, entities, features, widgets, pages, app).",
         },
       ],
       options: aliasOptions,
@@ -121,7 +121,7 @@ ruleTester.run("layer-imports", rule, {
       errors: [
         {
           message:
-            "Слой может импортировать в себя только нижележащие слои (shared, entities, features, widgets, pages, app)",
+            "A layer can only import underlying layers into itself (shared, entities, features, widgets, pages, app).",
         },
       ],
       options: aliasOptions,

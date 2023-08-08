@@ -59,13 +59,13 @@ ruleTester.run("public-api-imports", rule, {
   invalid: [
     {
       code: "import { addCommentFormActions, addCommentFormReducer } from '@/entities/Article/model/file.ts'",
-      errors: [{ message: "Абсолютный импорт разрешен только из Public API (index.ts)"}],
+      errors: [{ message: "Absolute imports are only allowed from Public API (index.ts)"}],
       options: aliasOptions,
     },
     {
       filename: 'C:\\Server\\domains\\react-ts-course\\src\\entities\\StoreDecorator.tsx',
       code: "import { addCommentFormActions, addCommentFormReducer } from '@/entities/Article/testing/file.tsx'",
-      errors: [{message: 'Абсолютный импорт разрешен только из Public API (index.ts)'}],
+      errors: [{message: 'Absolute imports are only allowed from Public API (index.ts)'}],
       options: [{
         alias: '@',
         testFilesPatterns: ['**/*.test.ts', '**/*.test.tsx', '**/StoreDecorator.tsx']
@@ -74,7 +74,7 @@ ruleTester.run("public-api-imports", rule, {
     {
       filename: 'C:\\Server\\domains\\react-ts-course\\src\\entities\\forbidden.ts',
       code: "import { addCommentFormActions, addCommentFormReducer } from '@/entities/Article/testing'",
-      errors: [{message: 'Тестовые данные необходимо импортировать из publicApi/testing.ts'}],
+      errors: [{message: 'Test data must be imported from publicApi/testing.ts'}],
       options: [{
         alias: '@',
         testFilesPatterns: ['**/*.test.ts', '**/*.test.ts', '**/StoreDecorator.tsx']

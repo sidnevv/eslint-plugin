@@ -33,7 +33,7 @@ ruleTester.run("path-checker", rule, {
       code: "import { addCommentFormActions, addCommentFormReducer } from '@/entities/Article/model/slices/addCommentFormSlice'",
       errors: [
         {
-          message: "В рамках одного слайса все пути должны быть относительными",
+          message: "Within a single slide, all paths must be relative.",
         },
       ],
       options: [{ alias: "@" }],
@@ -43,7 +43,7 @@ ruleTester.run("path-checker", rule, {
       code: "import { addCommentFormActions, addCommentFormReducer } from 'entities/Article/model/slices/addCommentFormSlice'",
       errors: [
         {
-          message: "В рамках одного слайса все пути должны быть относительными",
+          message: "Within a single slide, all paths must be relative.",
         },
       ],
     },
